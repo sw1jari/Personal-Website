@@ -1,0 +1,11 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<ul style="list-style: none; padding: 0;">
+{{ range .Pages }}
+  <li style="margin: 15px 0;">
+    <a href="{{ .Permalink }}"><strong>{{ .Title }}</strong></a>
+    {{ if .Params.date }}<br><span style="color: #666; font-size: 0.9em;">{{ .Date.Format "Jan 2, 2006" }}</span>{{ end }}
+  </li>
+{{ end }}
+</ul>
+{{ end }}

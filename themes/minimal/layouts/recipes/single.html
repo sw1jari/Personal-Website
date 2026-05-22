@@ -1,0 +1,50 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ if .Params.source }}<p style="color: #666;"><a href="{{ .Params.source }}">Source: {{ .Params.source_name }}</a></p>{{ end }}
+{{ if .Params.servings }}<p><strong>Servings:</strong> <span id="servings">{{ .Params.servings }}</span></p>{{ end }}
+
+<div class="recipe-controls">
+  <button onclick="scale(0.5)">½ Recipe</button>
+  <button onclick="scale(1)">1x Recipe</button>
+  <button onclick="scale(1.5)">1.5x Recipe</button>
+  <button onclick="scale(2)">2x Recipe</button>
+  <button onclick="toggleAmounts()">Toggle Amounts</button>
+</div>
+
+<div id="recipe-content">
+{{ .Content }}
+</div>
+
+<script>
+let scale_factor = 1;
+let amounts_visible = true;
+
+function scale(factor) {
+  scale_factor = factor;
+  let amounts = document.querySelectorAll('.ingredient-amount');
+  amounts.forEach(el => {
+    let orig = parseFloat(el.dataset.orig);
+    let scaled = (orig * factor).toFixed(2).replace(/\.?0+$/, '');
+    el.textContent = scaled + ' ' + el.dataset.unit;
+  });
+  document.getElementById('servings').textContent = ({{ .Params.servings | default "4" }} * factor).toFixed(0);
+}
+
+function toggleAmounts() {
+  amounts_visible = !amounts_visible;
+  document.querySelectorAll('.ingredient-amount').forEach(el => {
+    el.style.display = amounts_visible ? 'inline' : 'none';
+  });
+}
+
+// Parse amounts on load (format: "1.5g chicken" -> extract amount & unit)
+document.querySelectorAll('.ingredient-amount').forEach(el => {
+  let text = el.textContent.trim();
+  let match = text.match(/^([\d.]+)\s*([a-z%]*)/i);
+  if (match) {
+    el.dataset.orig = match[1];
+    el.dataset.unit = match[2] || '';
+  }
+});
+</script>
+{{ end }}

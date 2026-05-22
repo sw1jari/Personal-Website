@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Recipes on Jari Kasandiredjo</title>
+    <link>http://localhost:1313/recipes/</link>
+    <description>Recent content in Recipes on Jari Kasandiredjo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/recipes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Butter Chicken Curry</title>
+      <link>http://localhost:1313/recipes/butter-chicken/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/recipes/butter-chicken/</guid>
+      <description>Marinade 1 cup full-fat yogurt (240g) 1 Tbsp garam masala (15g) 1 Tbsp kosher salt (15g) 1.5 lbs boneless, skinless chicken thighs (680g) Curry Sauce 2 Tbsp vegetable oil (30g) 1 yellow onion, diced 2-inch knob of ginger, finely diced 6 cloves of garlic, sliced Salt and pepper to taste 2 tsp paprika (8g) 2 tsp ground cumin (9g) 1 Tbsp garam masala (14g) 1.5 tsp turmeric powder (6g) 14 oz crushed tomatoes 2/3 cup water (160ml) 1 cup heavy cream (240ml) 2 Tbsp unsalted butter (28g) Steamed rice Fresh cilantro Instructions In a medium bowl, whisk together the yogurt, garam masala, and kosher salt until combined.</description>
+    </item>
+  </channel>
+</rss>

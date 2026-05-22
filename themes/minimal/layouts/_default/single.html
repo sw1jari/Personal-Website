@@ -1,0 +1,5 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ if .Params.date }}<p style="color: #666; font-size: 0.9em;">{{ .Date.Format "January 2, 2006" }}</p>{{ end }}
+{{ .Content }}
+{{ end }}
