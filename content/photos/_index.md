@@ -1,5 +1,5 @@
 ---
-title: "Portfolio"
+title: "Photos & Projects"
 ---
 
 ## Projects
