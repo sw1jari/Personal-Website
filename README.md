@@ -1,5 +1,7 @@
 # Personal Website
 
+**Live site:** https://sw1jari.github.io/Personal-Website/
+
 Built with Hugo. Content in markdown, hosted on GitHub Pages.
 
 ## Local Development
@@ -14,7 +16,7 @@ Visit http://localhost:1313
 
 - `content/_index.md` - Home page
 - `content/about/_index.md` - About / CV
-- `content/portfolio/_index.md` - Portfolio
+- `content/photos/_index.md` - Photos & Projects
 - `content/recipes/` - Recipe collection
 - `content/blog/` - Blog posts
 
