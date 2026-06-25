@@ -1,1 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jari Kasandiredjo</title><link>https://sw1jari.github.io/Personal-Website/</link><description>Recent content on Jari Kasandiredjo</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://sw1jari.github.io/Personal-Website/index.xml" rel="self" type="application/rss+xml"/><item><title>Butter Chicken Curry</title><link>https://sw1jari.github.io/Personal-Website/recipes/butter-chicken/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sw1jari.github.io/Personal-Website/recipes/butter-chicken/</guid><description>Marinade 1 cup full-fat yogurt (240g) 1 Tbsp garam masala (15g) 1 Tbsp kosher salt (15g) 1.5 lbs boneless, skinless chicken thighs (680g) Curry Sauce 2 Tbsp vegetable oil (30g) 1 yellow onion, diced 2-inch knob of ginger, finely diced 6 cloves of garlic, sliced Salt and pepper to taste 2 tsp paprika (8g) 2 tsp ground cumin (9g) 1 Tbsp garam masala (14g) 1.5 tsp turmeric powder (6g) 14 oz crushed tomatoes 2/3 cup water (160ml) 1 cup heavy cream (240ml) 2 Tbsp unsalted butter (28g) Steamed rice Fresh cilantro Instructions In a medium bowl, whisk together the yogurt, garam masala, and kosher salt until combined.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jari Kasandiredjo</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Jari Kasandiredjo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Butter Chicken</title>
+      <link>http://localhost:1313/recipes/butter-chicken/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/recipes/butter-chicken/</guid>
+      <description>Ingredients Chicken [1 cup (240 g)] full-fat yogurt [1 Tbsp (15 g)] garam masala [1 Tbsp (15 g)] kosher salt [1 1/2 lbs (680 g)] boneless, skinless chicken thighs Butter Chicken Curry [2 Tbsp (30 g)] vegetable oil [1] yellow onion, diced 2-inch knob of ginger, finely diced [6] cloves of sliced garlic Salt and pepper to taste [2 tsp (8 g)] paprika [2 tsp (9 g)] ground cumin [1 Tbsp (14 g)] garam masala [1 1/2 tsp (6 g)] turmeric powder (optional) [14 oz] crushed tomatoes [2/3 cup (160 ml)] water [1 cup (240 ml)] heavy cream [2 Tbsp (28 g)] unsalted butter Steamed rice Fresh cilantro Instructions In a medium bowl, whisk together [1 cup (240 g)] full-fat yogurt, [1 Tbsp (15 g)] garam masala, and [1 Tbsp (15 g)] kosher salt.</description>
+    </item>
+    <item>
+      <title>Greek Couscous and Lentil Salad</title>
+      <link>http://localhost:1313/recipes/greek-couscous-lentil-salad/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/recipes/greek-couscous-lentil-salad/</guid>
+      <description>Ingredients Green lentils Couscous Cherry tomatoes Cucumbers [1 1/2 tsp] salt [1] shallot Vinegar Olives Fresh herbs (e.g., dill, basil, parsley) Feta cheese Olive oil Black pepper to taste Instructions In a pot of salted water, add the green lentils and bring to a boil. Set a timer for 10 minutes. After 10 minutes, add the couscous to the pot and continue cooking for an additional 10-12 minutes. Meanwhile, halve the cherry tomatoes (through the belly, not the stem) and place them over a strainer set over a bowl.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,50 +1,97 @@
 {{ define "main" }}
 <h1>{{ .Title }}</h1>
-{{ if .Params.source }}<p style="color: #666;"><a href="{{ .Params.source }}">Source: {{ .Params.source_name }}</a></p>{{ end }}
-{{ if .Params.servings }}<p><strong>Servings:</strong> <span id="servings">{{ .Params.servings }}</span></p>{{ end }}
+{{ if .Params.credit }}<p style="color:#666;">Recipe by
+  {{ if .Params.credit_url }}<a href="{{ .Params.credit_url }}">{{ .Params.credit }}</a>{{ else }}{{ .Params.credit }}{{ end }}
+  {{ if .Params.video_url }}· <a href="{{ .Params.video_url }}">video</a>{{ end }}
+</p>{{ end }}
 
 <div class="recipe-controls">
-  <button onclick="scale(0.5)">½ Recipe</button>
-  <button onclick="scale(1)">1x Recipe</button>
-  <button onclick="scale(1.5)">1.5x Recipe</button>
-  <button onclick="scale(2)">2x Recipe</button>
-  <button onclick="toggleAmounts()">Toggle Amounts</button>
+  <label>Servings:
+    <input id="people" type="number" min="1" step="1" value="{{ .Params.servings | default 4 }}" style="width:60px;">
+  </label>
+  <button type="button" id="toggle">Hide amounts in steps</button>
 </div>
 
-<div id="recipe-content">
+<div id="recipe">
 {{ .Content }}
 </div>
 
 <script>
-let scale_factor = 1;
-let amounts_visible = true;
+const BASE = {{ .Params.servings | default 4 }};
+const recipe = document.getElementById('recipe');
 
-function scale(factor) {
-  scale_factor = factor;
-  let amounts = document.querySelectorAll('.ingredient-amount');
-  amounts.forEach(el => {
-    let orig = parseFloat(el.dataset.orig);
-    let scaled = (orig * factor).toFixed(2).replace(/\.?0+$/, '');
-    el.textContent = scaled + ' ' + el.dataset.unit;
-  });
-  document.getElementById('servings').textContent = ({{ .Params.servings | default "4" }} * factor).toFixed(0);
+// Mark everything under the "Instructions" heading so the toggle only hits steps.
+let inSteps = false;
+for (const el of recipe.children) {
+  if (/^h[1-6]$/i.test(el.tagName)) inSteps = /instruction|step|method/i.test(el.textContent);
+  else if (inSteps) el.classList.add('steps');
 }
 
-function toggleAmounts() {
-  amounts_visible = !amounts_visible;
-  document.querySelectorAll('.ingredient-amount').forEach(el => {
-    el.style.display = amounts_visible ? 'inline' : 'none';
-  });
-}
-
-// Parse amounts on load (format: "1.5g chicken" -> extract amount & unit)
-document.querySelectorAll('.ingredient-amount').forEach(el => {
-  let text = el.textContent.trim();
-  let match = text.match(/^([\d.]+)\s*([a-z%]*)/i);
-  if (match) {
-    el.dataset.orig = match[1];
-    el.dataset.unit = match[2] || '';
+// Turn [amount] markers into scalable spans.
+function wrap(node) {
+  if (node.nodeType === 3) {
+    const parts = node.textContent.split(/(\[[^\]]+\])/);
+    if (parts.length === 1) return;
+    const frag = document.createDocumentFragment();
+    for (const p of parts) {
+      const m = p.match(/^\[(.+)\]$/);
+      if (m) {
+        const span = document.createElement('span');
+        span.className = 'amt';
+        span.dataset.orig = m[1];
+        span.textContent = m[1];
+        if (node.parentElement.closest('.steps')) span.classList.add('amt-step');
+        frag.appendChild(span);
+      } else {
+        frag.appendChild(document.createTextNode(p));
+      }
+    }
+    node.replaceWith(frag);
+  } else if (node.nodeType === 1) {
+    [...node.childNodes].forEach(wrap);
   }
+}
+wrap(recipe);
+
+function parseNum(t) {
+  const mix = t.match(/^(\d+)\s+(\d+)\/(\d+)$/);
+  if (mix) return +mix[1] + (+mix[2] / +mix[3]);
+  const frac = t.match(/^(\d+)\/(\d+)$/);
+  if (frac) return +frac[1] / +frac[2];
+  return parseFloat(t);
+}
+
+function fmt(n) {
+  const r = Math.round(n);
+  if (Math.abs(n - r) < 0.02) return String(r);
+  if (n >= 10) return String(Math.round(n));
+  if (n < 4) {
+    const whole = Math.floor(n), frac = n - whole;
+    const table = [[0.25,'1/4'],[0.33,'1/3'],[0.5,'1/2'],[0.67,'2/3'],[0.75,'3/4']];
+    for (const [v, s] of table)
+      if (Math.abs(frac - v) < 0.04) return (whole ? whole + ' ' : '') + s;
+  }
+  return n.toFixed(1).replace(/\.0$/, '');
+}
+
+function scale() {
+  const people = Math.max(1, parseInt(document.getElementById('people').value) || BASE);
+  const factor = people / BASE;
+  document.querySelectorAll('.amt').forEach(el => {
+    el.textContent = el.dataset.orig.replace(
+      /\d+\s+\d+\/\d+|\d+\/\d+|\d+(?:\.\d+)?/g,
+      t => fmt(parseNum(t) * factor));
+  });
+}
+
+let hidden = false;
+document.getElementById('toggle').addEventListener('click', e => {
+  hidden = !hidden;
+  document.querySelectorAll('.amt-step').forEach(el => el.style.display = hidden ? 'none' : '');
+  e.target.textContent = hidden ? 'Show amounts in steps' : 'Hide amounts in steps';
 });
+
+document.getElementById('people').addEventListener('input', scale);
+scale();
 </script>
 {{ end }}
