@@ -45,8 +45,7 @@ video_url: "https://..."          # optional, adds a "video" link
 2. Bake for 20 minutes.
 ```
 
-**The one rule:** wrap any amount you want to scale in `[square brackets]` —
-everything else is normal markdown.
+**The one rule:** wrap any amount you want to scale in `[square brackets]`. Everything else is normal markdown.
 
 - **Servings box**: visitors type any number (1 and up) and every bracketed
   amount rescales. Numbers, fractions (`1 1/2`, `2/3`) and metric in parentheses
@@ -59,5 +58,5 @@ everything else is normal markdown.
 Pushing to `claude/personal-website-markdown-PGAC1` triggers the GitHub Actions
 workflow, which builds the site and deploys it to GitHub Pages.
 
-> **One-time setup:** in the repo, go to **Settings → Pages → Source** and select
-> **GitHub Actions** (not "Deploy from a branch").
+> **One-time setup:** in the repo, go to Settings > Pages > Source and select
+> GitHub Actions (not "Deploy from a branch").

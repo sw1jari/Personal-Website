@@ -19,16 +19,16 @@ Data Science and AI Technology @ TU Delft. Interested in RL, and applying machin
 <div class="job">
 <h3>Full Stack Developer · A.L.S.R.V. Asopos de Vliet</h3>
 <p class="job-meta">dec. 2020 - mei 2025 · 4 jr 6 mnden · Leiderdorp, Zuid-Holland, Nederland</p>
-<p><strong>2021 - 2025 — Internal Member Portal for Communication on iOS and Android</strong><br>
+<p><strong>2021 - 2025: Internal Member Portal for Communication on iOS and Android</strong><br>
 Took the lead in designing and building an app from scratch for member communication. Also provided support to other developers in contributing to the app.<br>
 App Store Link: <a href="https://apps.apple.com/app/asopos/id1606014844?platform=iphone">apps.apple.com/app/asopos</a><br>
 Technologies Used: Flutter, Dart, Express, Node, JavaScript, MongoDB, Docker<br>
 (Note: One of the prototypes was also developed using React Native.)</p>
-<p><strong>2021 - 2024 — Website and CMS Development for the Northwave Regatta</strong><br>
+<p><strong>2021 - 2024: Website and CMS Development for the Northwave Regatta</strong><br>
 Led the development of the website and CMS for the Northwave Regatta, focusing on user experience and content management.<br>
 Website: <a href="https://northwaveregatta.nl">northwaveregatta.nl</a><br>
 Technologies Used: React, Strapi, TypeScript, GraphQL, Gatsby</p>
-<p><strong>2019 - 2024 — Maintenance of Asopos de Vliet's General Website</strong><br>
+<p><strong>2019 - 2024: Maintenance of Asopos de Vliet's General Website</strong><br>
 Responsible for the ongoing maintenance and updates of Asopos de Vliet's website, ensuring optimal performance and user experience.<br>
 Website: <a href="https://asopos.nl">asopos.nl</a><br>
 Technologies Used: React, Strapi, TypeScript, GraphQL, Gatsby</p>
@@ -40,11 +40,11 @@ Technologies Used: React, Strapi, TypeScript, GraphQL, Gatsby</p>
 <p>Internship at Bonnie. During my time as an intern at Bonnie, I was part of a small startup team. This allowed me to engage in very diverse tasks on the technical, business, and creative sides of the company.</p>
 <p>Contributions:</p>
 <ul>
-<li><strong>App Development</strong> — Worked on the iOS and Android applications. Technologies: Flutter, Dart.</li>
-<li><strong>Backend Development</strong> — Developed API endpoints that communicated between the email server, the database, and the client. Technologies: Ruby on Rails.</li>
-<li><strong>System Administration</strong> — Configured and maintained a Postfix mail relay server. Technologies: Postfix, Docker, Shell scripts.</li>
-<li><strong>DevOps</strong> — Engineered a CI/CD pipeline for the app's build and testing process.</li>
-<li><strong>Design Contributions</strong> — Created multiple designs to use in marketing material.</li>
+<li><strong>App Development:</strong> Worked on the iOS and Android applications. Technologies: Flutter, Dart.</li>
+<li><strong>Backend Development:</strong> Developed API endpoints that communicated between the email server, the database, and the client. Technologies: Ruby on Rails.</li>
+<li><strong>System Administration:</strong> Configured and maintained a Postfix mail relay server. Technologies: Postfix, Docker, Shell scripts.</li>
+<li><strong>DevOps:</strong> Engineered a CI/CD pipeline for the app's build and testing process.</li>
+<li><strong>Design Contributions:</strong> Created multiple designs to use in marketing material.</li>
 </ul>
 <p>This experience at Bonnie not only honed my technical skills but also improved my understanding of business operations.</p>
 </div>
@@ -65,7 +65,7 @@ Technologies Used: React, Strapi, TypeScript, GraphQL, Gatsby</p>
 <div class="job">
 <h3>Vrije Universiteit Amsterdam (VU Amsterdam)</h3>
 <p class="job-meta">Bachelor's degree · Computer Science · sep. 2021 - sep. 2025</p>
-<p>Average Grade: 8.0. Minor Bioinformatics and Systems Biology - Average Grade: 8.5. Thesis: 8.5 — Utilizing transfer learning for in vitro drug response prediction for Glioblastoma patients. 1st supervisor: Evert Bosdriesz. Daily supervisor: Yunlei Li (Erasmus MC).</p>
+<p>Average Grade: 8.0. Minor Bioinformatics and Systems Biology (Average Grade: 8.5). Thesis (8.5): Utilizing transfer learning for in vitro drug response prediction for Glioblastoma patients. Supervisor: Evert Bosdriesz. Daily supervisor: Yunlei Li (Erasmus MC).</p>
 </div>
 
 <div class="job">
