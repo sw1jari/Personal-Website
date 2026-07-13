@@ -31,9 +31,9 @@
 </head>
 <body>
   <nav>
-    <a href="/">Home</a>
-    <a href="/photos/">Photos</a>
-    <a href="/recipes/">Recipes</a>
+    <a href="{{ "" | relURL }}">Home</a>
+    <a href="{{ "photos/" | relURL }}">Photos</a>
+    <a href="{{ "recipes/" | relURL }}">Recipes</a>
   </nav>
   <main>{{ block "main" . }}{{ end }}</main>
   <footer>

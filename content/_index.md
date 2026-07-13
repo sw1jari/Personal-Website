@@ -80,4 +80,4 @@ Technologies Used: React, Strapi, TypeScript, GraphQL, Gatsby</p>
 
 ---
 
-Explore my [recipes](/recipes/) or [photos](/photos/).
+Explore my [recipes]({{< relref "recipes" >}}) or [photos]({{< relref "photos" >}}).
